@@ -5,7 +5,7 @@ import Button from "../components/Button.astro";
 
 <div x-data="{ showmenu: false }" class="fixed z-[100] items-center w-full bg-[#000000] bg-opacity-65 md:bg-transparent backdrop-blur-sm">
   <!-- brug "fixed" for at have den på siden hele vejen ned -->
-  <div id="navbar" class="relative max-w-7xl mx-auto z-[50]">
+  <div id="navbar" class="relative max-w-7xl mx-auto z-[50] ml-[300px]">
     <div class="flex items-center justify-center md:grid md:grid-cols-12 gap-6 py-4 px-6">
       <!-- Burger Menu -->
       <button id="burgermenu" class="col-span-2 lg:hidden p-8" x-on:click="showmenu = !showmenu">
@@ -35,10 +35,10 @@ import Button from "../components/Button.astro";
         </svg>
       </button>
 
-      <!-- Desktop Menu -->
-      <nav id="desktopmenu" class="hidden lg:flex col-span-8 items-center justify-between bg-white shadow z-[20]">
+      <!---------------------------- Desktop Menu ---------------------------->
+      <nav id="desktopmenu" class="hidden lg:flex col-span-7 col-start-3 items-center justify-between bg-white shadow z-[20]">
         <!-- Left Section: Links -->
-        <ul class="some1 list-none flex gap-12">
+        <ul class="some1 list-none flex gap-12 col-start-6 col-span-5 ">
           <li>
             <a href="/" class="text-neutral-50 py-2 hover:opacity-70">Hjem</a>
           </li>
@@ -59,14 +59,15 @@ import Button from "../components/Button.astro";
         </div>
 
         <!-- Right Section: Links and Button -->
-        <div class="flex items-center gap-12">
+        <div class="flex items-center gap-7">
           <ul class="some1 list-none">
             <li>
               <a href="/listeview" class="text-neutral-50 py-2 hover:opacity-70"> Vinkasser </a>
             </li>
           </ul>
           <a href="/formular_vinkasse">
-            <Button variant="primary" size="small">Bestil abonnement</Button>
+            <a href="formular_vinkasse"><Button variant="primary" size="small">Bestil abonnement</Button></a>
+            
           </a>
         </div>
       </nav>
@@ -98,6 +99,12 @@ import Button from "../components/Button.astro";
 
 <style>
   /*Link-hover effect*/
+  /* .some1{
+    display: flex;
+    justify-content: center;
+    
+  } */
+
   .some1 a {
     position: relative;
     line-height: 1.75rem /* 28px */;

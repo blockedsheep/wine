@@ -6,6 +6,8 @@ export default {
       colors: {
         transparent: "transparent",
         current: "currentColor",
+        
+        
 
         
 red: {

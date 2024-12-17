@@ -1,71 +1,143 @@
 ---
-
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from 'astro:assets';
+import facebookmobil from "../assets/images/facebookmobil.png";
+import instagrammobil from "../assets/images/instagrammobil.png";
+import kreditkort from "../assets/images/kreditkort.png";
+import linkedinmobil from "../assets/images/linkedinmobil.png";
+import mastercard from "../assets/images/mastercard.png";
+import mobilepay from "../assets/images/mobilepay.png";
+import vinensessensmobil from "../assets/images/vinensessensmobil.png";
+import visa from "../assets/images/visa.png";
 ---
 
 <!-- Footer til mobil format -->
-<footer class="max-w-7xl mx-auto md:p-0 p-8">
-  <div>
-    <img src="" alt="">
-  </div>
+<div class="sm:block md:hidden">
+  <footer class="max-w-7xl mx-auto md:p-0 p-8 bg-red-950">
 
-  <div>
-    <p>Edith rodesvej 67</p>
-  </div>
+    <div class="grid grid-cols-12 gap-gap">
+      <img class="col-start-1 col-span-6 pb-[36px]" src={vinensessensmobil.src} alt="" alt="">
+    </div>
+  
+    <div>
+      <p class="text-p-mobile pb-[31px]">Edith rodesvej 67</p>
+    </div>
+  
+    <div>
+      <p class="text-p-mobile pb-[31px]">CVR: 23452454</p>
+    </div>
+  
+    <div>
+      <p class="text-p-mobile pb-[31px]">email@business.dk</p>
+    </div>
+  
+    <div>
+      <p class="text-p-mobilepb-[43px]">Tlf: 46 75 21 34</p>
+    </div>
+  
+    <div>
+      <h2 class="text-h2-mobile pb-[23px]">Handel og politik</h2>
+    </div>
+  
+    <div>
+      <p class="text-p-mobile pb-[42px]">Handel- og persondata</p>
+    </div>
+  
+    <div class="flex space-x-10 pb-[72px]">
+      <img class="max-w-[43px] max-h-[45px]" src={linkedinmobil.src} alt="" alt="">
+      <img class="max-w-[43px] max-h-[45px]" src={facebookmobil.src} alt="" alt="">
+      <img class="max-w-[43px] max-h-[45px]" src={instagrammobil.src} alt="" alt="">
+    </div>
+  
+    <div>
+      <h2 class="text-h2-mobile pb-[31px]">Nyhedsbrev</h2>
+    </div>
+  
+    <div>
+      <p class="text-p-mobile pb-[83px]">Tilmeld dig på vores nyhedsbrev og få 10% rabat</p>
+    </div>
+  
+    <div>
+      <h4 class="text-h4-mobile pb-[19px]">Email</h4>
+    </div>
+  
+    <div class="flex pb-[47px]">
+      <input type="email">
+      <a href="#" class="text-p-mobile border-3 border-neutral-100 text-neutral-100 p-3
+      ">Send</a>
+    </div>
+  
+    <div>
+      <p class="text-p-mobile pb-[24px]">© Vinens Essens 2024</p>
+    </div>
+  
+    <div class="flex space-x-5">
+      <img class="max-w-[51px] max-h-[29px]" src={kreditkort.src} alt="" alt="">
+      <img class="max-w-[51px] max-h-[29px]" src={visa.src} alt="" alt="">
+      <img class="max-w-[51px] max-h-[29px]" src={mastercard.src} alt="" alt="">
+      <img class="max-w-[51px] max-h-[29px]" src={mobilepay.src} alt="" alt="">
 
-  <div>
-    <p>CVR: 23452454</p>
-  </div>
-
-  <div>
-    <p>email@business.dk</p>
-  </div>
-
-  <div>
-    <p>Tlf: 46 75 21 34</p>
-  </div>
-
-  <div>
-    <h2>Handel og politik</h2>
-  </div>
-
-  <div>
-    <p>Handel- og persondata</p>
-  </div>
-
-  <div>
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-  </div>
-
-  <div>
-    <h2>Nyhedsbrev</h2>
-  </div>
-
-  <div>
-    <p>Tilmeld dig på vores nyhedsbrev og få 10% rabat</p>
-  </div>
-
-  <div>
-    <h4>Email</h4>
-  </div>
-
-  <div>
-    <input type="email">
-    <a href="#">Send</a>
-  </div>
-
-  <div>
-    <p>© Vinens Essens 2024</p>
-  </div>
-
-  <div>
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-  </div>
-
+    </div>
 </footer>
+</div>
+
+
+
+<!-------------------- Footer til desktop format -------------------->
+<div class="hidden md:block bg-red-950 text-white pb-[41px]">
+  <section class="max-w-7xl mx-auto px-8 py-12 grid grid-cols-12 gap-gap">
+
+    <!-- Venstre kolonne -->
+    <div class="col-span-4 space-y-2">
+      <img src={vinensessensmobil.src} alt="Vinens Essens logo" class="w-24">
+      <p class="text-p-desktop">Edith rodesvej 67</p>
+      <p class="text-p-desktop">2610, Rødovre</p>
+      <p class="text-p-desktop">CVR: 23452454</p>
+      <p class="text-p-desktop">email@business.dk</p>
+      <p class="text-p-desktop">Tlf: 46 75 21 34</p>
+    </div>
+
+    <!-- Midterkolonne -->
+    <div class="col-span-4 space-y-4">
+      <h4 class="text-h4-desktop">Handel og politik</h4>
+      <p>Handel- og persondata</p>
+      <h4 class="text-h4-desktop mt-6 w-[293px]">Følg vores sociale medier</h4>
+      <div class="flex space-x-4 gap-5">
+        <img class="max-w-[43px] max-h-[45px]" src={linkedinmobil.src} alt="" alt="">
+        <img class="max-w-[43px] max-h-[45px]" src={facebookmobil.src} alt="" alt="">
+        <img class="max-w-[43px] max-h-[45px]" src={instagrammobil.src} alt="" alt="">
+      </div>
+
+    </div>
+
+    <!-- Højre kolonne -->
+    <div class="col-span-4 space-y-2">
+      <h4 class="text-h4-desktop">Nyhedsbrev</h4>
+      <p class="text-p-desktop">Tilmeld dig vores nyhedsbrev og få 10% rabat</p>
+      <div class="flex space-x-2">
+        <input 
+          type="email" 
+          placeholder="Email adresse" 
+          class="p-2 text-black  w-full"
+        />
+        <a href="" class="text-p-mobile border-3 border-neutral-100 text-neutral-100 p-3 text-p-desktop">Send</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bundtekst -->
+  <div class="text-center mt-8 flex justify-center gap-5">
+    <p class="text-p-desktop">© Vinens Essens 2024</p>
+    <img class="max-w-[51px] max-h-[29px]" src={kreditkort.src} alt="" alt="">
+    <img class="max-w-[51px] max-h-[29px]" src={visa.src} alt="" alt="">
+    <img class="max-w-[51px] max-h-[29px]" src={mastercard.src} alt="" alt="">
+    <img class="max-w-[51px] max-h-[29px]" src={mobilepay.src} alt="" alt="">
+
+  </div>
+</div>
+
+
+
 
 
